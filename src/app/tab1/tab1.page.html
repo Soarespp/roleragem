@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Eventos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>      
+    <ion-card class="welcome-card">
+      <ion-img src="/assets/festa.jpeg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>Vamos festar</ion-card-subtitle>
+        <ion-card-title>Festas em Floripa</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Interessado em saber o que rola em Floripa, estamos aqui para te proporcionar os seus melhores momentos.</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-list>
+        <ion-list-header>
+          <ion-label>Próximos eventos:</ion-label>
+        </ion-list-header>
+        <ion-item-sliding *ngFor="let info of infos">
+          <ion-item detail lines="full" routerLink="/detalhe-evento/{{info.key}}">
+            <ion-icon name="desktop" slot="start"></ion-icon>
+            {{info.info_title}}
+          </ion-item>
+        </ion-item-sliding>
+      </ion-list>
+</ion-content>

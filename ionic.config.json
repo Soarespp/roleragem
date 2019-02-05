@@ -1,0 +1,7 @@
+{
+  "name": "PartysFloripa",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
